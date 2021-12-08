@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MountainDo Lagoa da Conceição 2016</title>
+    <link rel="stylesheet" href="css/index.min.css" />
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/papaparse.min.js"></script>
+    <script src="js/index.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ficha de inscrição de atletas</h1>
+        <form><label for="txtFileUpload"></label><input type="file" name="txtFileUpload" id="txtFileUpload" accept=".csv" /><label
+                for="atletas">Atletas: </label><select id="atletas" name="atletas">
+                <option value="-1">Selecione um atleta...</option>
+            </select></form>
+    </div>
+    <div id="usersData">
+        <div class="header">
+            <div id="logo"><img src="images/logo.jpg" alt="Logo MD" /></div>
+            <div id="titulo">
+                <h2>FICHA DE INSCRIÇÃO DO ATLETA</h2>
+            </div>
+        </div>
+        <div id="atleta">
+            <div class="field"><label for="equipe" class="equipe">Nome da Equipe </label><input id="equipe" type="text"
+                    value="Floripa Runners 15" /></div>
+            <div class="field"><label for="nome" class="nome">Nome atleta </label><input id="nome" type="text" /></div>
+            <div class="field"><label class="sexo">Sexo </label><label for="sexoM" class="sexoM">M <input id="sexoM"
+                        type="checkbox" name="sexoM" /></label><label for="sexoF" class="sexoF">F <input id="sexoF"
+                        type="checkbox" name="sexoF" /></label><label for="nascimento" class="nascimento"><span>Data de
+                        nascimento </span><input id="nascimento" type="text" /></label></div>
+            <div class="field"><label for="telefone" class="telefone"><span>Fone </span><input id="telefone" type="text" /></label><label
+                    for="cidade" class="cidade"><span>Cidade </span><input id="cidade" type="text" /></label><label for="estado"
+                    class="estado"><span>UF </span><input id="estado" type="text" /></label></div>
+            <div class="field"><label for="email" class="email"><span>Email (letra de forma) </span><input id="email"
+                        type="text" /></label></div>
+            <div class="field"><label class="camisa">Camiseta </label><label for="camisaP" class="camisaP">P </label><input
+                    id="camisaP" type="checkbox" name="camisaP" /><label for="camisaM" class="camisaM">M </label><input
+                    id="camisaM" type="checkbox" name="camisaM" /><label for="camisaG" class="camisaG">G </label><input
+                    id="camisaG" type="checkbox" name="camisaG" /><label for="camisaGG" class="camisaGG">GG </label><input
+                    id="camisaGG" type="checkbox" name="camisaGG" /></div>
+            <div class="field"><label class="babylook">BABY LOOK </label><label for="babylookP" class="babylookP">P
+                </label><input id="babylookP" type="checkbox" name="babylookP" /><label for="babylookM" class="babylookM">M
+                </label><input id="babylookM" type="checkbox" name="babylookM" /></div>
+            <div class="field"><label class="tempo10km"><span>Tempo em 10 km (percurso asfalto e plano)</span><input id="tempo10km"
+                        type="text" /><span>min/km</span></label></div>
+            <div id="declaracao">
+                <h4>Declaração</h4>
+                <p class="declaracao">Declaro que participo desta prova por livre e espontânea vontade, gozando de
+                    perfeitas condições de saúde. Portanto, isento os organizadores, patrocinadores e demais entidades
+                    de apoio deste evento de qualquer responsabilidade sobre eventuais acidentes e/ou danos físicos e
+                    clínicos que venha a sofrer. Permito o uso de minha imagem e nome para fins legítimos. Conheço e
+                    estou de pleno acordo com todos os itens do regulamento e acato todas as decisões da organização,
+                    comprometendo-me a não recorrer a nenhum órgão ou tribunal, no que diz respeito a qualquer punição
+                    a mim imputada pela organização.</p>
+            </div>
+        </div>
+        <div id="localData">
+            <div class="field"><label class="local">Local/data</label><input id="local" type="text" /></div>
+        </div>
+        <div id="assinatura">
+            <div class="field"><input id="rubrica" type="text" /><label class="rubrica">Assinatura do atleta</label></div>
+        </div>
+        <div class="footer"><img src="images/rodape.png" alt="Banner MD" />
+            <p class="site">www.mountaindo.com.br</p>
+        </div>
+    </div>
+    <div id="editor"></div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+[
+  {
+    "Nome": "Leandro de Assis Gabriel",
+    "Sexo": "M",
+    "Telefone": "(48) 9933-9104",
+    "Nascimento": "29/10/1979",
+    "Cidade": "Florianópolis",
+    "Estado": "SC",
+    "Email": "lassisg@gmail.com",
+    "Camisa": "Camiseta M",
+    "Tempo10km": "55:30"
+  },
+  {
+    "Nome": "Cecilia Theberge Bigio",
+    "Sexo": "F",
+    "Telefone": "(48) 9933-9105",
+    "Nascimento": "21/02/1980",
+    "Cidade": "Rio de Janeiro",
+    "Estado": "RJ",
+    "Email": "cecbigio@gmail.com",
+    "Camisa": "Baby Look P",
+    "Tempo10km": "1:15:42"
+  }
+]

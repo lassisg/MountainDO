@@ -1,0 +1,116 @@
+// output: ../../$1.html, pretty:false
+-var equipe = "Floripa Runners 15"
+
+<!DOCTYPE html>
+html(lang="pt_BR")
+  head
+    meta(charset="UTF-8")
+    title MountainDo Lagoa da Conceição 2016
+    link(rel="stylesheet", href="css/index.min.css")
+    //- script(src='imp/atletas.json')
+    script(src='js/jquery-3.0.0.min.js')
+    script(src='js/html2canvas.js')
+    script(src='js/jspdf.min.js')
+    //- script(src="//mrrio.github.io/jsPDF/dist/jspdf.debug.js")
+    script(src='js/papaparse.min.js')
+    script(src='js/index.min.js')
+    
+  body
+    .container
+      h1 Ficha de inscrição de atletas
+      form
+        label(for="txtFileUpload")
+        input(type="file" name="txtFileUpload" id="txtFileUpload" accept=".csv")
+        
+        label(for="atletas") Atletas: 
+        select#atletas(name="atletas")
+          option(value="-1") Selecione um atleta...
+        
+        //- button#cmd Salvar PDF
+        //- a#cmd(href="javascript:demoFromHTML()") Salvar PDF
+ 
+    #usersData
+      .header
+        #logo
+          img(src="images/logo.jpg", alt="Logo MD")
+        #titulo
+          h2 FICHA DE INSCRIÇÃO DO ATLETA
+      
+      #atleta
+        .field
+          label.equipe(for="equipe") Nome da Equipe 
+          input#equipe(type="text" value=equipe)
+        
+        .field
+          label.nome(for="nome") Nome atleta 
+          input#nome(type="text")
+
+        .field
+          label.sexo Sexo 
+          label.sexoM(for="sexoM") M 
+            input#sexoM(type="checkbox" name="sexoM")
+          label.sexoF(for="sexoF") F 
+            input#sexoF(type="checkbox" name="sexoF")
+          label.nascimento(for="nascimento")
+            span Data de nascimento 
+            input#nascimento(type="text")
+
+        .field
+          label.telefone(for="telefone")
+            span Fone 
+            input#telefone(type="text")
+          label.cidade(for="cidade")
+            span Cidade 
+            input#cidade(type="text")
+          label.estado(for="estado")
+            span UF 
+            input#estado(type="text")
+          
+        .field
+          label.email(for="email")
+            span Email (letra de forma) 
+            input#email(type="text")
+
+        .field
+          label.camisa Camiseta 
+          label.camisaP(for="camisaP") P 
+          input#camisaP(type="checkbox" name="camisaP")
+          label.camisaM(for="camisaM") M 
+          input#camisaM(type="checkbox" name="camisaM")
+          label.camisaG(for="camisaG") G 
+          input#camisaG(type="checkbox" name="camisaG")
+          label.camisaGG(for="camisaGG") GG 
+          input#camisaGG(type="checkbox" name="camisaGG")
+
+        .field
+          label.babylook BABY LOOK 
+          label.babylookP(for="babylookP") P 
+          input#babylookP(type="checkbox" name="babylookP")
+          label.babylookM(for="babylookM") M 
+          input#babylookM(type="checkbox" name="babylookM")
+
+        .field
+          label.tempo10km
+            span Tempo em 10 km (percurso asfalto e plano)
+            input#tempo10km(type="text")
+            span min/km
+
+        #declaracao
+          h4 Declaração
+          p.declaracao Declaro que participo desta prova por livre e espontânea vontade, gozando de perfeitas condições de saúde. Portanto, isento os organizadores, patrocinadores e demais entidades de apoio deste evento de qualquer responsabilidade sobre eventuais acidentes e/ou danos físicos e clínicos que venha a sofrer.  Permito o uso de minha imagem e nome para fins legítimos. Conheço e estou de pleno acordo com todos os itens do regulamento e acato todas as decisões da organização, comprometendo-me a não recorrer a nenhum órgão ou tribunal, no que diz respeito a qualquer punição a mim imputada pela organização.
+            
+      #localData
+        .field
+          label.local Local/data
+          input#local(type="text")
+           
+      #assinatura
+        .field
+          input#rubrica(type="text")
+          label.rubrica Assinatura do atleta
+
+      .footer
+        img(src="images/rodape.png", alt="Banner MD")
+        p.site www.mountaindo.com.br
+
+    #editor
